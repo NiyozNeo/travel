@@ -3,7 +3,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-[100px] my-[70px]">
+    <div className="flex flex-wrap items-center justify-center gap-[50px] lg:gap-[200px] my-[70px]">
       <div>
         <h1 className="font-bold text-[35px]">
           Long heading is what you see <br /> here in this feater section

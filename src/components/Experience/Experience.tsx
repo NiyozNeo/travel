@@ -15,7 +15,7 @@ export default function Experience() {
           vel, nobis rem? Tempora possimus eligendi et eaque necessitatibus,
         </p>
       </div>
-      <div className="flex flex-wrap lg:flex-nowrap gap-8 items-center justify-around mt-[60px]">
+      <div className="flex flex-wrap lg:flex-nowrap gap-8 items-center justify-center mt-[60px]">
         <Description
           title="Explore the World with Easy"
           desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas

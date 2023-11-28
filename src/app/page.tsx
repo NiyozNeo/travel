@@ -1,4 +1,5 @@
 import About from "@/components/About/About";
+import Benefit from "@/components/Benefit/Benefit";
 import Experience from "@/components/Experience/Experience";
 import Hero from "@/components/Hero/Hero";
 import Price from "@/components/Price/Price";
@@ -17,6 +18,9 @@ export default function Home() {
       </section>
       <section className="p-5">
         <Experience />
+      </section>
+      <section className="p-5">
+        <Benefit />
       </section>
     </main>
   );
