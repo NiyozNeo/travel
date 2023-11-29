@@ -1,0 +1,11 @@
+{
+        "header": {
+            "home": "Домашня страница",
+            "about": "O",
+            "price": "расходы",
+            "experience": "опыт",
+            "benefit": "выгода",
+            "guides": "гиды",
+            "contact": "контакт"
+          }
+}

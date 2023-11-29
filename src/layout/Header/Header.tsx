@@ -1,17 +1,33 @@
 "use client";
+import LocaleSwitcher from "@/components/Local-switcher/Local-switcher";
 import { Offcanvas } from "@/components/Offcanvas/Offcanvas";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { LiaAngleUpSolid } from "react-icons/lia";
+import { Locale } from "../../../i18n.config";
+import { getDictionary } from "@/lib/Dictionary";
+import { FaBarsStaggered } from "react-icons/fa6";
 
-const Navbar: React.FC = () => {
+interface Props {
+  header: {
+    home: string;
+    about: string;
+    price: string;
+    experience: string;
+    benefit: string;
+    guides: string;
+    contact: string;
+  };
+  lang: string;
+}
+
+export default function Navbar({ header, lang }: Props) {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [showBackToTop, setShowBackToTop] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      // Set the threshold value based on when you want to show the button
       const threshold = 150;
 
       if (scrollY > threshold) {
@@ -20,15 +36,12 @@ const Navbar: React.FC = () => {
         setShowBackToTop(false);
       }
     };
-
-    // Attach the event listener
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <nav className="p-4 shadow-md">
       {showBackToTop && (
@@ -46,30 +59,31 @@ const Navbar: React.FC = () => {
         </div>
         <div className="hidden md:flex space-x-4">
           <Link href="#home" className="text-[black]">
-            Home
+            {header.home}
           </Link>
           <Link href="#about" className="text-[black]">
-            About
+            {header.about}
           </Link>
           <Link href="#price" className="text-[black]">
-            Price
+            {header.price}
           </Link>
           <Link href="#experience" className="text-[black]">
-            Experience
+            {header.experience}
           </Link>
           <Link href="#benefit" className="text-[black]">
-            Benefit
+            {header.benefit}
           </Link>
           <Link href="#guides" className="text-[black]">
-            Guides
+            {header.guides}
           </Link>
           <Link href="#location" className="text-[black]">
-            Contact
+            {header.contact}
           </Link>
         </div>
+        <LocaleSwitcher />
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(true)} className="text-[black]">
-            Menu
+            <FaBarsStaggered size={24} />
           </button>
         </div>
       </div>
@@ -81,49 +95,47 @@ const Navbar: React.FC = () => {
               href="#home"
               className="text-[black] hover:bg-slate-300 p-2 rounded-md"
             >
-              Home
+              {header.home}
             </Link>
             <Link
               href="#about"
               className="text-[black] hover:bg-slate-300 p-2 rounded-md"
             >
-              About
+              {header.about}
             </Link>
             <Link
               href="#price"
               className="text-[black] hover:bg-slate-300 p-2 rounded-md"
             >
-              Price
+              {header.price}
             </Link>
             <Link
               href="#experience"
               className="text-[black] hover:bg-slate-300 p-2 rounded-md"
             >
-              Experience
+              {header.experience}
             </Link>
             <Link
               href="#benefit"
               className="text-[black] hover:bg-slate-300 p-2 rounded-md"
             >
-              Benefit
+              {header.benefit}
             </Link>
             <Link
               href="#guides"
               className="text-[black] hover:bg-slate-300 p-2 rounded-md"
             >
-              Guides
+              {header.guides}
             </Link>
             <Link
               href="#location"
               className="text-[black] hover:bg-slate-300 p-2 rounded-md"
             >
-              Contact
+              {header.contact}
             </Link>
           </div>
         </div>
       </Offcanvas>
     </nav>
   );
-};
-
-export default Navbar;
+}

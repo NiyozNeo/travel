@@ -44,11 +44,9 @@ export const Offcanvas: React.FC<ModalProps> = ({
       <div
         className={`absolute w-1/2 xl:w-[31%]  right-0  modal_wrapperCanvas bg-white p-5  z-[9999]`}
       >
-        <div>
-
-        </div>
+        <div></div>
         <div className={`flex items-center justify-between mb-[20px]`}>
-          <h1 className="font-bold text-[25px]" >Logo</h1>
+          <h1 className="font-bold text-[25px]">Logo</h1>
           <button onClick={() => setModal(false)}>
             <MdClose size={24} color={"#000"} />
           </button>

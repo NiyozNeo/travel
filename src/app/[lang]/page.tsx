@@ -7,12 +7,24 @@ import Location from "@/components/Location/Location";
 import Price from "@/components/Price/Price";
 import Footer from "@/layout/Footer/Footer";
 import Navbar from "@/layout/Header/Header";
+import { useTranslations } from "next-intl";
+import { Locale } from "../../../i18n.config";
+import { getDictionary } from "@/lib/Dictionary";
+import LocaleSwitcher from "@/components/Local-switcher/Local-switcher";
 
-export default function Home() {
+
+
+export default async function Home({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+  const { header } = await getDictionary(lang);
+
   return (
-    <main>
+    <>
       <section id="home">
-        <Navbar />
+        <Navbar lang={lang} header={header} />
         <Hero />
       </section>
       <section className="p-5 container  mx-auto" id="about">
@@ -36,6 +48,6 @@ export default function Home() {
       <footer className="p-5 container  mx-auto">
         <Footer />
       </footer>
-    </main>
+    </>
   );
 }
