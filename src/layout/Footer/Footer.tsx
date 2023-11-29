@@ -4,7 +4,8 @@ import React from "react";
 import { FaInstagram } from "react-icons/fa";
 import { FiYoutube } from "react-icons/fi";
 import { LiaTelegram } from "react-icons/lia";
-import ImgLogo from "../../../public/images/krypton.jpg";
+
+import "./footer.css";
 
 export default function Footer() {
   return (
@@ -15,6 +16,29 @@ export default function Footer() {
         </Link>
 
         <div className="flex items-center gap-5">
+          {/* <div className="social">
+            <div className="icons">
+              <div className="icon instagram">
+                <div className="tooltip"> Instagram </div>
+                <Link href={"#"} className="hover:shadow-md p-5">
+                  <FaInstagram size={24} color={"gray"} />
+                </Link>
+              </div>
+              <div className="icon twitter">
+                <div className="tooltip"> Telegram </div>
+                <Link href={"#"} className="hover:shadow-md p-5">
+                  <LiaTelegram size={24} color={"gray"} />
+                </Link>
+              </div>
+              <div className="icon youtube">
+                <div className="tooltip"> Youtube </div>
+                <Link href={"#"} className="hover:shadow-md p-5">
+                  <FiYoutube size={24} color={"gray"} />
+                </Link>
+              </div>
+            </div>
+          </div> */}
+
           <Link href={"#"}>
             <FaInstagram size={24} />
           </Link>

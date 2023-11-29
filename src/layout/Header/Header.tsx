@@ -43,7 +43,7 @@ export default function Navbar({ header, lang }: Props) {
   }, []);
 
   return (
-    <nav className="p-4 shadow-md">
+    <nav className="p-4 shadow-custom">
       {showBackToTop && (
         <div className="fixed bottom-[30px] border border-[gray] bg-white p-3 rounded-full right-[30px] z-[9999]">
           <Link href="#" className="">

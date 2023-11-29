@@ -42,7 +42,7 @@ export const Offcanvas: React.FC<ModalProps> = ({
       className={`overlay bg-black bg-opacity-40 ${modal ? "open" : ""}`}
     >
       <div
-        className={`absolute w-1/2 xl:w-[31%]  right-0  modal_wrapperCanvas bg-white p-5  z-[9999]`}
+        className={`absolute w-[70%]  right-0  modal_wrapperCanvas bg-white p-5  z-[9999]`}
       >
         <div></div>
         <div className={`flex items-center justify-between mb-[20px]`}>
