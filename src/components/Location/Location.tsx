@@ -30,7 +30,7 @@ export default function Location() {
             <div>
               <p className="font-bold">Office</p>
               <Link className="" href={"#"}>
-                Tashkent Uzbekistan Yunusobod
+                Shayxontohur tumani, Chorsu dahasi , 12
               </Link>
             </div>
           </div>
@@ -39,8 +39,8 @@ export default function Location() {
       <div>
         <div className="w-full">
           <iframe
-            className="w-full"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.532411548661!2d69.29434097613664!3d41.34078007130585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38aef38c46a7598b%3A0x1b4780b64fcdfc16!2zTFdOIGNvd29ya2luZyAo0LrQvtCy0L7RgNC60LjQvdCzKQ!5e0!3m2!1sen!2s!4v1701230893930!5m2!1sen!2s"
+          className="w-full"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2532.9824417193818!2d69.23126511237673!3d41.32011262148945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDE5JzEyLjIiTiA2OcKwMTMnNTkuMCJF!5e0!3m2!1sen!2s!4v1701255614539!5m2!1sen!2s"
             width="600"
             height="450"
             allowFullScreen

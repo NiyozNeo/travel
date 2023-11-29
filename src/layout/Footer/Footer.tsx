@@ -13,13 +13,7 @@ export default function Footer() {
         <Link href={"#"} className="font-bold text-[35px]">
           LOGO
         </Link>
-        <div className="flex items-center gap-3">
-          <Link href={"#"}> one</Link>
-          <Link href={"#"}> two</Link>
-          <Link href={"#"}> three</Link>
-          <Link href={"#"}> four</Link>
-          <Link href={"#"}> five</Link>
-        </div>
+
         <div className="flex items-center gap-5">
           <Link href={"#"}>
             <FaInstagram size={24} />
@@ -35,7 +29,8 @@ export default function Footer() {
       <div className="bg-[black] w-full h-[1px] my-[25px]"></div>
       <div>
         <Link
-          href={"https://t.me/kryptonuzb"}
+        target="_blank"
+          href={"https://krypton.uz/"}
           className="flex items-center justify-center gap-5"
         >
           <Image
@@ -45,7 +40,7 @@ export default function Footer() {
             width={100}
             height={100}
           />
-          <p className="text-center">Krypton 2023 Tashkent Uzbekistan</p>
+          <p className="text-center">© 2023 KRYPTON</p>
         </Link>
       </div>
     </div>

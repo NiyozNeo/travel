@@ -54,7 +54,7 @@ export default function Navbar({ header, lang }: Props) {
       <div className="container mx-auto flex items-center justify-between">
         <div className="text-[black]">
           <Link href="/" className="text-lg font-bold">
-            Logo
+            Hidoyat Travel
           </Link>
         </div>
         <div className="hidden md:flex space-x-4">
