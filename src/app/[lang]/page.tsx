@@ -12,8 +12,6 @@ import { Locale } from "../../../i18n.config";
 import { getDictionary } from "@/lib/Dictionary";
 import LocaleSwitcher from "@/components/Local-switcher/Local-switcher";
 
-
-
 export default async function Home({
   params: { lang },
 }: {
@@ -23,8 +21,8 @@ export default async function Home({
 
   return (
     <>
+      <Navbar lang={lang} header={header} />
       <section id="home">
-        <Navbar lang={lang} header={header} />
         <Hero />
       </section>
       <section className="p-5 container  mx-auto" id="about">
