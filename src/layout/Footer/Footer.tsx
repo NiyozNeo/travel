@@ -29,17 +29,10 @@ export default function Footer() {
       <div className="bg-[black] w-full h-[1px] my-[25px]"></div>
       <div>
         <Link
-        target="_blank"
+          target="_blank"
           href={"https://krypton.uz/"}
           className="flex items-center justify-center gap-5"
         >
-          <Image
-            className="w-[25px] rounded-full"
-            src={ImgLogo}
-            alt="logo"
-            width={100}
-            height={100}
-          />
           <p className="text-center">© 2023 KRYPTON</p>
         </Link>
       </div>
