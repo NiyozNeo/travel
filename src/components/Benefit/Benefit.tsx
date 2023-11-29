@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function Benefit() {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-[50px] md:gap-[180px]">
+    <div className="flex flex-wrap md:flex-nowrap items-center justify-between gap-8 ">
       <div>
         <div>
-          <h1 className="font-bold text-[35px]">
-            Discover the Benefits of <br /> Booking with us
+          <h1 className="font-bold text-[35px] max-w-[500px]">
+            Discover the Benefits of Booking with us
           </h1>
-          <p className="max-w-[670px]">
+          <p className="max-w-[650px]">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat
             magni magnam quisquam unde neque rerum cum dicta pariatur numquam
             inventore saepe ipsam explicabo illum exercitationem vero dolorum
