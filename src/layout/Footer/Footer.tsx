@@ -15,8 +15,8 @@ export default function Footer() {
           Hidoyat Travel
         </Link>
 
-        <div className="flex items-center gap-5">
-          {/* <div className="social">
+        <div className="flex items-center ">
+          <div className="social">
             <div className="icons">
               <div className="icon instagram">
                 <div className="tooltip"> Instagram </div>
@@ -37,9 +37,9 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-          </div> */}
+          </div>
 
-          <Link href={"#"}>
+          {/* <Link href={"#"}>
             <FaInstagram size={24} />
           </Link>
           <Link href={"#"}>
@@ -47,7 +47,7 @@ export default function Footer() {
           </Link>
           <Link href={"#"}>
             <LiaTelegram size={24} />
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className="bg-[black] w-full h-[1px] my-[25px]"></div>

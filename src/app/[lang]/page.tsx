@@ -23,7 +23,7 @@ export default async function Home({
     <>
       <Navbar lang={lang} header={header} />
       <section id="home">
-        <Hero />
+        <Hero lang={lang} header={header} />
       </section>
       <section className="p-5 container  mx-auto" id="about">
         <About />

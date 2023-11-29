@@ -17,6 +17,8 @@ interface Props {
     benefit: string;
     guides: string;
     contact: string;
+    mainText: string;
+    umra: string;
   };
   lang: string;
 }
