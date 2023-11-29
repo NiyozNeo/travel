@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
     <nav className="p-4 shadow-md">
       {showBackToTop && (
         <div className="fixed bottom-[30px] border border-[gray] bg-white p-3 rounded-full right-[30px] z-[9999]">
-          <Link href="/" className="">
+          <Link href="#" className="">
             <LiaAngleUpSolid size={24} />
           </Link>
         </div>
