@@ -11,24 +11,26 @@ import Navbar from "@/layout/Header/Header";
 export default function Home() {
   return (
     <main>
-      <Navbar />
-      <Hero />
-      <section className="p-5 container  mx-auto">
+      <section id="home">
+        <Navbar />
+        <Hero />
+      </section>
+      <section className="p-5 container  mx-auto" id="about">
         <About />
       </section>
-      <section className="p-5">
+      <section className="p-5" id="price">
         <Price />
       </section>
-      <section className="p-5">
+      <section className="p-5 container mx-auto" id="experience">
         <Experience />
       </section>
-      <section className="p-5 container mx-auto">
+      <section className="p-5 container mx-auto" id="benefit">
         <Benefit />
       </section>
-      <section className="p-5 container  mx-auto">
+      <section className="p-5 container  mx-auto" id="guides">
         <Guides />
       </section>
-      <section className="p-5 container  mx-auto">
+      <section className="p-5 container  mx-auto" id="location">
         <Location />
       </section>
       <footer className="p-5 container  mx-auto">

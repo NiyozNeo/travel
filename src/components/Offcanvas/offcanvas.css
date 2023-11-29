@@ -1,0 +1,48 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    display: none;
+    justify-content: center;
+    transition: 1s;
+}
+
+
+
+.open {
+    position: fixed;
+    display: flex;
+    transition: 1s;
+    z-index: 9;
+    overflow: hidden;
+}
+
+.modal_wrapperCanvas {
+    /* top: 120px; */
+    position: absolute;
+    height: 100%;
+}
+
+/* .modal_button {
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+} */
+
+.modal_header {
+    margin-bottom: 20px;
+}
+
+
+
+
+@media screen and (max-width: 508px) {
+    .modal_wrapper {
+        width: 70% !important;
+    }
+}
