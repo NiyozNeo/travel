@@ -13,7 +13,7 @@ export const lang = {
   ru: {
     header: {
         home: "Домашняя страница",
-        about: "о",
+        about: "Информация",
         price: "расходы",
         experience: "опыт",
         benefit: "выгода",

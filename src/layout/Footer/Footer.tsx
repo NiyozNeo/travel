@@ -11,7 +11,7 @@ export default function Footer() {
     <div>
       <div className="flex flex-col md:flex-row gap-8 justify-center items-center md:justify-between my-[50px]">
         <Link href={"#"} className="font-bold text-[35px]">
-          LOGO
+          Hidoyat Travel
         </Link>
 
         <div className="flex items-center gap-5">
