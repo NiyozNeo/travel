@@ -1,4 +1,3 @@
-import "./socialButtons.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faYoutube,
@@ -6,7 +5,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import styles from "./socialButtons.module.css";
-import { FaFacebook } from "react-icons/fa";
+
 export default function MyComponent() {
   return (
     <div className={styles["social-btns"]}>
@@ -16,7 +15,8 @@ export default function MyComponent() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FontAwesomeIcon icon={faYoutube} />
+        <FontAwesomeIcon icon={faYoutube}  style={{ color: "blue" }}
+         />
       </a>
 
       <a
@@ -25,7 +25,8 @@ export default function MyComponent() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FontAwesomeIcon icon={faTelegram} />
+        <FontAwesomeIcon icon={faTelegram}  
+        />
       </a>
       <a
         className={`${styles.btn} ${styles.instagram}`}
@@ -33,7 +34,8 @@ export default function MyComponent() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FontAwesomeIcon icon={faInstagram} />
+        <FontAwesomeIcon icon={faInstagram} 
+         />
       </a>
     </div>
   );

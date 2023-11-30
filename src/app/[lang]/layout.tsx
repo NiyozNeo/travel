@@ -4,9 +4,11 @@ import "./globals.css";
 import Head from "next/head";
 import { pick } from "lodash";
 import { i18n } from "../../../i18n.config";
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
-config.autoAddCss = false
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import "../../../node_modules/@fortawesome/fontawesome-svg-core/styles.css";
+
+config.autoAddCss = false;
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -27,6 +29,11 @@ export default function RootLayout({
   return (
     <html lang={params.lang}>
       <Head>
+        <script
+          // you might need to get a newer version
+          src="https://kit.fontawesome.com/fbadad80a0.js"
+          crossOrigin="anonymous"
+        ></script>
         <link
           rel="stylesheet"
           type="text/css"
@@ -38,7 +45,16 @@ export default function RootLayout({
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
       </Head>
       <body className={inter.className}>{children}</body>
     </html>
