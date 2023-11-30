@@ -8,6 +8,25 @@
           "guides": "Gid",
           "contact": "Ma'lumotlar",
           "mainText":"Rasululloh sallallohu alayhi va sallam 'Bir Umra keyingi Umragacha bo'lgan gunohlarning kaforratidir' deya marhamat qilganlar.",
-          "umra":"Umra safari Qabul: 2023"
+          "umra":"Umra safari Qabul: 2023",
+          "airPlane":"Aviachipta",
+          "hotel":"Mehmonxona",
+          "visa":"Saudia Arabiston vizasi",
+          "ellikBosh":"Tajribalik ellikboshi",
+          "insurance":"Tibbiy sug'urta",
+          "transfer":"Transfer",
+          "gift":"Hadyalar",
+          "scarf":"Ayollar uchun ro'mol",
+          "bag":"Sumka",
+          "vest":"Nimcha",
+          "quran":"Qur'on kitobi",
+          "water":"Zamzam suvi 5 L",
+          "mountain":"Uhud tog'i va shahidlari",
+          "factory":"Qur'on zavodi",
+          "garden":"Xurmo bog'i",
+          "xiroMountain":"Xiro tog'i",
+          "food":"3 mahal ovqat",
+          "day":"kun",
+          "ziyorat":"Ekskursiya va ziyoratlar"
         }
 }

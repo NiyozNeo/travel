@@ -14,12 +14,28 @@ interface Props {
     contact: string;
     mainText: string;
     umra: string;
+    airPlane: string;
+    hotel: string;
+    visa: string;
+    ellikBosh: string;
+    insurance: string;
+    transfer: string;
+    gift: string;
+    scarf: string;
+    bag: string;
+    vest: string;
+    quran: string;
+    water: string;
+    mountain: string;
+    factory: string;
+    garden: string;
+    xiroMountain: string;
+    food: string;
+    day: string;
+    ziyorat: string;
   };
-  lang: string;
 }
-export default function CenteredHero({ lang, header }: Props) {
-  console.log(lang);
-  
+export default function CenteredHero({ header }: Props) {
   return (
     <>
       <div className="flex flex-col items-center justify-center h-[50vh] p-5 my-[40px]">

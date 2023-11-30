@@ -11,114 +11,132 @@ import { PiHandbag } from "react-icons/pi";
 import { FaVest } from "react-icons/fa";
 import { IoIosWater } from "react-icons/io";
 import { GiMountaintop } from "react-icons/gi";
+import { MdOutlineRestaurantMenu } from "react-icons/md";
 
-export default function Price() {
+interface Props {
+  header: {
+    home: string;
+    about: string;
+    price: string;
+    experience: string;
+    benefit: string;
+    guides: string;
+    contact: string;
+    mainText: string;
+    umra: string;
+    airPlane: string;
+    hotel: string;
+    visa: string;
+    ellikBosh: string;
+    insurance: string;
+    transfer: string;
+    gift: string;
+    scarf: string;
+    bag: string;
+    vest: string;
+    quran: string;
+    water: string;
+    mountain: string;
+    factory: string;
+    garden: string;
+    xiroMountain: string;
+    food: string;
+    day: string;
+    ziyorat: string;
+  };
+}
+
+export default function Price({ header }: Props) {
   const textData = [
     {
       id: 1,
       icon: <GiAirplaneDeparture />,
-      text: "Aviachipta",
+      text: header.airPlane,
     },
     {
       id: 2,
       icon: <FaHotel />,
-      text: "Mehmonxona",
+      text: header.hotel,
     },
     {
       id: 3,
       icon: <RiVisaLine />,
-      text: "Saudia Arabiston vizasi",
+      text: header.visa,
     },
     {
       id: 4,
       icon: <FaUserTie />,
-      text: "Tajribalik ellikboshi",
+      text: header.ellikBosh,
     },
     {
       id: 5,
       icon: <FaHouseMedicalCircleCheck />,
-      text: "Tibbiy sug'urta",
+      text: header.insurance,
     },
     {
       id: 6,
       icon: <TbBus />,
-      text: "Transfer",
+      text: header.transfer,
     },
     {
       id: 7,
       icon: <BsGift />,
-      text: "Hadyalar",
+      text: header.gift,
     },
     {
       id: 8,
       icon: <GrRestroomWomen />,
-      text: "Ayollar uchun ro'mol",
+      text: header.scarf,
     },
     {
       id: 9,
       icon: <PiHandbag />,
-      text: "Sumka",
+      text: header.bag,
     },
     {
       id: 10,
       icon: <FaVest />,
-      text: "Nimcha",
+      text: header.vest,
     },
     {
       id: 11,
       icon: <FaQuran />,
-      text: "Qur'on kitobi",
+      text: header.quran,
     },
     {
       id: 12,
       icon: <IoIosWater />,
-      text: "Zamzam suvi 5 L",
+      text: header.water,
+    },
+    {
+      id: 13,
+      icon: <MdOutlineRestaurantMenu />,
+      text: header.food,
     },
   ];
   const travel = [
     {
       id: 1,
       icon: <GiMountaintop />,
-      text: "Uhud tog'i va shahidlari",
+      text: header.mountain,
     },
     {
       id: 2,
       icon: <FaQuran />,
-      text: "Qur'on zavodi",
+      text: header.factory,
     },
     {
       id: 3,
       icon: <GiPalmTree />,
-      text: "Xurmo bog'i",
+      text: header.garden,
     },
     {
       id: 4,
       icon: <GiMountaintop />,
-      text: "Xiro tog'i",
+      text: header.xiroMountain,
     },
   ];
-  const textDataBusiness = [
-    {
-      id: 1,
-      text: "Feature text goes here",
-    },
-    {
-      id: 2,
-      text: "Feature text goes here",
-    },
-    {
-      id: 3,
-      text: "Feature text goes here",
-    },
-    {
-      id: 4,
-      text: "Feature text goes here",
-    },
-    {
-      id: 5,
-      text: "Feature text goes here",
-    },
-  ];
+
   return (
     <div className="flex flex-col items-center my-[70px]">
       <p className="font-semibold">Tagline</p>
@@ -128,6 +146,8 @@ export default function Price() {
       </p>
       <div className="flex flex-wrap justify-center items-center gap-[40px] mt-[50px]">
         <Card
+          editional={header.ziyorat}
+          day={header.day}
           title="Ekonom"
           price="19"
           yearPrice="199"
@@ -137,6 +157,8 @@ export default function Price() {
           isComfort={false}
         />
         <Card
+          editional={header.ziyorat}
+          day={header.day}
           title="Komfort"
           price="29"
           yearPrice="299"

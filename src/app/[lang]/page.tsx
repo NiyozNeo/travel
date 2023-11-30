@@ -21,15 +21,15 @@ export default async function Home({
 
   return (
     <>
-      <Navbar lang={lang} header={header} />
+      <Navbar header={header} />
       <section id="home">
-        <Hero lang={lang} header={header} />
+        <Hero header={header} />
       </section>
       <section className="p-5 container  mx-auto" id="about">
         <About />
       </section>
       <section className="p-5" id="price">
-        <Price />
+        <Price header={header} />
       </section>
       <section className="p-5 container mx-auto" id="experience">
         <Experience />

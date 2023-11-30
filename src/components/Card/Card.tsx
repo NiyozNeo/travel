@@ -9,6 +9,8 @@ interface Props {
   price: string;
   yearPrice: string;
   phone: string;
+  day: string;
+  editional: string;
   data: any[];
   travel: any[];
   isComfort: boolean;
@@ -19,7 +21,9 @@ export default function Card({
   price,
   phone,
   data,
+  editional,
   travel,
+  day,
   isComfort,
 }: Props) {
   return (
@@ -32,33 +36,26 @@ export default function Card({
           <div className="flex  justify-between">
             <div>
               <p className="font-bold text-blue-900 text-[20px]">{title}</p>
-              <p className="font-bold text-[14px] text-blue-800">14 kun</p>
+              <p className="font-bold text-[14px] text-blue-800">14 {day}</p>
             </div>
             <div>
               <p className="font-bold text-[20px] text-blue-400">${price}</p>
             </div>
           </div>
           <div className="mt-[25px]  overflow-y-auto">
-            {data.map((i) => (
-              <div
-                key={i.id}
-                className="flex items-center mb-[15px] gap-[10px]"
-              >
-                {i.icon}
-                <p>{i.text}</p>
-              </div>
-            ))}
-            {isComfort ? (
-              <div className="flex items-center mb-[15px] gap-[10px]">
-                <MdOutlineRestaurantMenu />
-                <p>3 mahal ovqat</p>
-              </div>
-            ) : (
-              ""
+            {data.map((i) =>
+              (isComfort && i.id <= 13) || (!isComfort && i.id !== 13) ? (
+                <div
+                  key={i.id}
+                  className="flex items-center mb-[15px] gap-[10px]"
+                >
+                  {i.icon}
+                  <p>{i.text}</p>
+                </div>
+              ) : null
             )}
-            <p className="font-bold my-[25px] ms-[25px]">
-              Ekskursiya va ziyoratlar
-            </p>
+
+            <p className="font-bold my-[25px] ms-[25px]">{editional}</p>
             {travel.map((i) => (
               <div
                 key={i.id}

@@ -19,11 +19,29 @@ interface Props {
     contact: string;
     mainText: string;
     umra: string;
+    airPlane: string;
+    hotel: string;
+    visa: string;
+    ellikBosh: string;
+    insurance: string;
+    transfer: string;
+    gift: string;
+    scarf: string;
+    bag: string;
+    vest: string;
+    quran: string;
+    water: string;
+    mountain: string;
+    factory: string;
+    garden: string;
+    xiroMountain: string;
+    food: string;
+    day: string;
+    ziyorat: string;
   };
-  lang: string;
 }
 
-export default function Navbar({ header, lang }: Props) {
+export default function Navbar({ header }: Props) {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [showBackToTop, setShowBackToTop] = useState<boolean>(false);
 
