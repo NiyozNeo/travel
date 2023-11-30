@@ -5,7 +5,7 @@ import { SlLocationPin } from "react-icons/sl";
 export default function Location() {
   return (
     <div className="my-[70px]">
-      <div className="flex flex-wrap gap-8 items-center justify-between mb-[50px]">
+      <div className="flex flex-wrap md:flex-nowrap gap-8 items-center justify-between mb-[50px]">
         <div className="flex flex-col w-full md:w-2/3">
           <p>Discover</p>
           <h1 className="font-bold text-[35px]">Contact Relume</h1>
