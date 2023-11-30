@@ -16,7 +16,7 @@ export default function About() {
       </div>
       <div>
         <Image
-          className="w-[500px] h-[500px] rounded-md"
+          className="w-[700px] h-[500px] rounded-md "
           src={"https://picsum.photos/seed/picsum/200/300"}
           width={100}
           height={100}

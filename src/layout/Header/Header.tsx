@@ -13,9 +13,7 @@ interface Props {
     home: string;
     about: string;
     price: string;
-    experience: string;
     benefit: string;
-    guides: string;
     contact: string;
     mainText: string;
     umra: string;
@@ -88,14 +86,8 @@ export default function Navbar({ header }: Props) {
             <Link href="#price" className="text-[black]">
               {header.price}
             </Link>
-            <Link href="#experience" className="text-[black]">
-              {header.experience}
-            </Link>
             <Link href="#benefit" className="text-[black]">
               {header.benefit}
-            </Link>
-            <Link href="#guides" className="text-[black]">
-              {header.guides}
             </Link>
             <Link href="#location" className="text-[black]">
               {header.contact}
@@ -112,46 +104,19 @@ export default function Navbar({ header }: Props) {
         <Offcanvas modal={menuOpen} setModal={setMenuOpen}>
           <div className=" z-[999]">
             <div className="flex flex-col space-y-4">
-              <Link
-                href="#home"
-                className="text-[black] hover:bg-slate-300 p-2 rounded-md"
-              >
+              <Link href="#home" className="text-[black]">
                 {header.home}
               </Link>
-              <Link
-                href="#about"
-                className="text-[black] hover:bg-slate-300 p-2 rounded-md"
-              >
+              <Link href="#about" className="text-[black]">
                 {header.about}
               </Link>
-              <Link
-                href="#price"
-                className="text-[black] hover:bg-slate-300 p-2 rounded-md"
-              >
+              <Link href="#price" className="text-[black]">
                 {header.price}
               </Link>
-              <Link
-                href="#experience"
-                className="text-[black] hover:bg-slate-300 p-2 rounded-md"
-              >
-                {header.experience}
-              </Link>
-              <Link
-                href="#benefit"
-                className="text-[black] hover:bg-slate-300 p-2 rounded-md"
-              >
+              <Link href="#benefit" className="text-[black]">
                 {header.benefit}
               </Link>
-              <Link
-                href="#guides"
-                className="text-[black] hover:bg-slate-300 p-2 rounded-md"
-              >
-                {header.guides}
-              </Link>
-              <Link
-                href="#location"
-                className="text-[black] hover:bg-slate-300 p-2 rounded-md"
-              >
+              <Link href="#location" className="text-[black]">
                 {header.contact}
               </Link>
             </div>

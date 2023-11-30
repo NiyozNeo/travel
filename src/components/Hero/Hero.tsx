@@ -8,9 +8,7 @@ interface Props {
     home: string;
     about: string;
     price: string;
-    experience: string;
     benefit: string;
-    guides: string;
     contact: string;
     mainText: string;
     umra: string;
@@ -43,6 +41,8 @@ export default function CenteredHero({ header }: Props) {
           {header.umra}
         </h1>
         <p className="max-w-[800px] text-center mt-[25px]">{header.mainText}</p>
+
+        <button className="bg-[#3081D0] p-5 px-9 mt-8 text-[white] font-bold rounded-md">Band qilish</button>
       </div>
       <div className="text-center flex flex-col gap-2">
         <Carousel slides={false} />

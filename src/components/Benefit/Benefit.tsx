@@ -13,7 +13,7 @@ export default function Benefit() {
         />
       </div>
       <div>
-        <div>
+        <div data-aos="fade-left">
           <h1 className="font-bold text-[35px] max-w-[500px]">
             Discover the Benefits of Booking with us
           </h1>

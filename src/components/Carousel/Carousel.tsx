@@ -60,7 +60,7 @@ export default class Carousel extends Component<CarouselProps> {
               alt={`hero`}
               width={420}
               height={420}
-              style={{ height: "420px", width: "420px" }}
+              style={{ height: "420px", width: "420px",objectFit:"cover" }}
             />
           </div>
           <div className="w-full p-4">

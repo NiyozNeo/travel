@@ -68,7 +68,7 @@ export default function Card({
           </div>
         </div>
         <div className="mt-auto ">
-          <div className="flex bg-blue-900 text-textWhite p-3 justify-center mb-[0px]">
+          <div className="flex bg-[#3081D0] text-textWhite p-3 justify-center mb-[0px]">
             <Link href={`tel:${phone}`}>{phone}</Link>
           </div>
         </div>

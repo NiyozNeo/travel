@@ -1,15 +1,17 @@
 import React from "react";
+import { MdOutlineWorkspacePremium } from "react-icons/md";
 import { RiBox2Line } from "react-icons/ri";
 
 interface Props {
   title: string;
+  icons: any;
   desc: string;
 }
 
-export default function Description({ title, desc }: Props) {
+export default function Description({ title, desc, icons }: Props) {
   return (
     <div className="flex flex-col items-center">
-      <RiBox2Line size={40} />
+      {icons}
       <h2 className="font-bold text-[35px] my-[25px] max-w-[400px] text-center">
         {title}
       </h2>

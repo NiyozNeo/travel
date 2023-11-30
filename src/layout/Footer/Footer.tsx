@@ -60,7 +60,7 @@ export default function Footer() {
       <div>
         <Link
           target="_blank"
-          href={"https://krypton.uz/"}
+          href={"http://krypton.uz/"}
           className="flex items-center justify-center gap-5"
         >
           <p className="text-center">© 2023 KRYPTON</p>

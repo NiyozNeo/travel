@@ -7,8 +7,8 @@ export default function Location() {
     <div className="my-[70px]">
       <div className="flex flex-wrap md:flex-nowrap gap-8 items-center justify-between mb-[50px]">
         <div className="flex flex-col w-full md:w-2/3">
-          <p>Discover</p>
-          <h1 className="font-bold text-[35px]">Contact Relume</h1>
+          <p>Kontakt</p>
+          <h1 className="font-bold text-[35px]">Biz bilan bog'lanish</h1>
           <p className="max-w-[700px]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
             quod autem culpa maiores quia quibusdam iure fugiat minima
@@ -19,7 +19,7 @@ export default function Location() {
           <div className="flex items-center gap-2">
             <HiOutlinePhone size={24} />
             <div>
-              <p className="font-bold">Phone</p>
+              <p className="font-bold">Telefon raqam</p>
               <Link className="decoration underline" href={"tel:+998901235698"}>
                 +998901235698
               </Link>
@@ -28,7 +28,7 @@ export default function Location() {
           <div className="flex items-center gap-2">
             <SlLocationPin size={24} />
             <div>
-              <p className="font-bold">Office</p>
+              <p className="font-bold">Manzil</p>
               <Link className="" href={"#"}>
                 Shayxontohur tumani, Chorsu dahasi , 12
               </Link>

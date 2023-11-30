@@ -1,11 +1,9 @@
 {
         "header": {
-          "home": "Bosh sahifa",
+          "home": "Asosiy",
           "about": "Haqida",
-          "price": "Narxi",
-          "experience": "Tajribalar",
-          "benefit": "Foyda",
-          "guides": "Gid",
+          "price": "Tur paketlar",
+          "benefit": "Afzalliklar",
           "contact": "Ma'lumotlar",
           "mainText":"Rasululloh sallallohu alayhi va sallam 'Bir Umra keyingi Umragacha bo'lgan gunohlarning kaforratidir' deya marhamat qilganlar.",
           "umra":"Umra safari Qabul: 2023",

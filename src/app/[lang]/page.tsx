@@ -31,10 +31,10 @@ export default async function Home({
       <section className="p-5" id="price">
         <Price header={header} />
       </section>
-      <section className="p-5 container mx-auto" id="experience">
+      <section className="p-5 container mx-auto" id="benefit">
         <Experience />
       </section>
-      <section className="p-5 container mx-auto" id="benefit">
+      <section className="p-5 container mx-auto" id="Ex">
         <Benefit />
       </section>
       <section className="p-5 container  mx-auto" id="guides">

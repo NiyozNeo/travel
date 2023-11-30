@@ -18,9 +18,7 @@ interface Props {
     home: string;
     about: string;
     price: string;
-    experience: string;
     benefit: string;
-    guides: string;
     contact: string;
     mainText: string;
     umra: string;
@@ -139,8 +137,8 @@ export default function Price({ header }: Props) {
 
   return (
     <div className="flex flex-col items-center my-[70px]">
-      <p className="font-semibold">Tagline</p>
-      <h1 className="font-bold text-[35px] my-[10px]">Pricing plan</h1>
+      <p className="font-semibold">Narx</p>
+      <h1 className="font-bold text-[35px] my-[10px]">Ta'riflarimiz</h1>
       <p className="text-[14px]">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugit quod
       </p>

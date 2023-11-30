@@ -22,8 +22,10 @@ export default function LocaleSwitcher() {
           <li key={locale}>
             <Link
               href={redirectedPathName(locale)}
-              className={`rounded-md border ${
-                isCurrentLocale ? "bg-black text-white" : "bg-white text-black"
+              className={`rounded-md border border-[#3081D0] ${
+                isCurrentLocale
+                  ? "bg-[#3081D0] text-white"
+                  : "bg-white text-black"
               } px-3 py-2`}
             >
               {locale}

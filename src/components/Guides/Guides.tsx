@@ -24,10 +24,10 @@ export default function Guides() {
           </div>
         </div>
       </div>
-      <div className=" flex w-full md:w-[500px]">
+      <div className=" flex w-full md:w-[700px]">
         <iframe
           className="w-full h-[500px]"
-          width="500"
+          width="800"
           height="315"
           src="https://www.youtube.com/embed/p2ECRWKpawM?si=4MW04gg7_asSCRQd"
           title="YouTube video player"
