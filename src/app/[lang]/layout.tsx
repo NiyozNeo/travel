@@ -7,7 +7,6 @@ import { i18n } from "../../../i18n.config";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "../../../node_modules/@fortawesome/fontawesome-svg-core/styles.css";
-import Script from "next/script";
 
 import { MotionContext } from "framer-motion";
 config.autoAddCss = false;
@@ -53,11 +52,7 @@ export default function RootLayout({
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         />
       </Head>
-      <Script
-        // you might need to get a newer version
-        src="https://kit.fontawesome.com/fbadad80a0.js"
-        crossOrigin="anonymous"
-      ></Script>
+   
       <body className={inter.className}>{children}</body>
     </html>
   );
