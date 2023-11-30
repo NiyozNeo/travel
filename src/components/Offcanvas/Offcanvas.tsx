@@ -21,20 +21,6 @@ export const Offcanvas: React.FC<ModalProps> = ({
     }
   };
 
-  const handleKeyPress = (event: KeyboardEvent) => {
-    if (event.key === "Escape" && modal) {
-      setModal(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("keydown", handleKeyPress);
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyPress);
-    };
-  }, [modal]);
-
   return (
     <div
       ref={overlayRef}

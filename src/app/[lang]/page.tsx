@@ -1,3 +1,4 @@
+"use client"
 import About from "@/components/About/About";
 import Benefit from "@/components/Benefit/Benefit";
 import Experience from "@/components/Experience/Experience";
@@ -11,6 +12,7 @@ import { useTranslations } from "next-intl";
 import { Locale } from "../../../i18n.config";
 import { getDictionary } from "@/lib/Dictionary";
 import LocaleSwitcher from "@/components/Local-switcher/Local-switcher";
+import AnimatedContent from "@/components/Intro/Intro";
 
 export default async function Home({
   params: { lang },
