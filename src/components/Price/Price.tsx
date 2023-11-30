@@ -12,9 +12,6 @@ import { FaVest } from "react-icons/fa";
 import { IoIosWater } from "react-icons/io";
 import { GiMountaintop } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
-
 
 interface Props {
   header: {
@@ -48,27 +45,6 @@ interface Props {
 }
 
 export default function Price({ header }: Props) {
-
-  const controls = useAnimation();
-
-  useEffect(() => {
-    const onScroll = () => {
-      const shouldAnimate = window.scrollY > 150;
-
-      if (shouldAnimate) {
-        controls.start({ opacity: 1, y: 10, visibility: "visible" });
-      } else {
-        controls.start({ opacity: 0, y: 50, visibility: "hidden" });
-      }
-    };
-
-    window.addEventListener("scroll", onScroll);
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, [controls]);
-
   const textData = [
     {
       id: 1,
@@ -167,37 +143,17 @@ export default function Price({ header }: Props) {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugit quod
       </p>
       <div className="flex flex-wrap justify-center items-center gap-[40px] mt-[50px]">
-        <motion.div
-        
-          initial={{ opacity: 0.1, right: "25%", bottom: 15 }}
-          animate={controls}
-          transition={{ duration: 0.5 }}
-          variants={{
-            hidden: {
-              scale: .8,
-              opacity: 0
-            },
-            visible: {
-              scale: 1,
-              opacity: 1,
-              transition: {
-                delay: .4
-              }
-            },
-          }}
-        >
-          <Card
-            editional={header.ziyorat}
-            day={header.day}
-            title="Ekonom"
-            price="19"
-            yearPrice="199"
-            phone="+998901234567"
-            data={textData}
-            travel={travel}
-            isComfort={false}
-          />
-        </motion.div>
+        <Card
+          editional={header.ziyorat}
+          day={header.day}
+          title="Ekonom"
+          price="19"
+          yearPrice="199"
+          phone="+998901234567"
+          data={textData}
+          travel={travel}
+          isComfort={false}
+        />
         <Card
           editional={header.ziyorat}
           day={header.day}

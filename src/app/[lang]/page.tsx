@@ -13,19 +13,21 @@ import { Locale } from "../../../i18n.config";
 import { getDictionary } from "@/lib/Dictionary";
 import LocaleSwitcher from "@/components/Local-switcher/Local-switcher";
 import AnimatedContent from "@/components/Intro/Intro";
+import { use } from "react";
 
-export default async function Home({
+export default  function Home({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
-  const { header } = await getDictionary(lang);
+  const { header } =  use(getDictionary(lang));
 
   return (
     <>
       <Navbar header={header} />
       <section id="home">
         <Hero header={header} />
+        <AnimatedContent />
       </section>
       <section className="p-5 container  mx-auto" id="about">
         <About />
