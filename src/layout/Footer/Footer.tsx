@@ -6,6 +6,8 @@ import { FiYoutube } from "react-icons/fi";
 import { LiaTelegram } from "react-icons/lia";
 
 import "./footer.css";
+import MyComponent from "@/components/SocialButtons/SocialButtons";
+import SocialButtons from "@/components/SocialButtons/SocialButtons";
 
 export default function Footer() {
   return (
@@ -16,7 +18,7 @@ export default function Footer() {
         </Link>
 
         <div className="flex items-center ">
-          <div className="social">
+          {/* <div className="social">
             <div className="icons">
               <div className="icon instagram">
                 <div className="tooltip"> Instagram </div>
@@ -37,7 +39,8 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
+          <MyComponent/>
 
           {/* <Link href={"#"}>
             <FaInstagram size={24} />
