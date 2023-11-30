@@ -29,9 +29,9 @@ export default function Card({
   return (
     <div
       // style={{}}
-      className=" p-5 lg:w-[400px] w-full h-[900px] shadow-custom cursor-pointer"
+      className=" p-5 lg:w-[400px] w-full   cursor-pointer card"
     >
-      <div className="flex flex-col justify-between h-full">
+      <div className="flex card-inner flex-col h-[930px] justify-between ">
         <div>
           <div className="flex  justify-between">
             <div>

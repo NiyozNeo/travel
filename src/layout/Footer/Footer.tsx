@@ -8,6 +8,8 @@ import { LiaTelegram } from "react-icons/lia";
 import "./footer.css";
 import MyComponent from "@/components/SocialButtons/SocialButtons";
 import SocialButtons from "@/components/SocialButtons/SocialButtons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
@@ -40,7 +42,8 @@ export default function Footer() {
               </div>
             </div>
           </div> */}
-          <MyComponent/>
+
+          <MyComponent />
 
           {/* <Link href={"#"}>
             <FaInstagram size={24} />
