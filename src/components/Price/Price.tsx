@@ -14,7 +14,7 @@ import { IoIosWater } from "react-icons/io";
 import { GiMountaintop } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 import { useEffect, useRef } from "react";
-import { useAnimation, motion, useScroll } from "framer-motion";
+import { useAnimation, motion, useScroll, useTransform } from "framer-motion";
 
 interface Props {
   header: {
@@ -53,6 +53,8 @@ export default function Price({ header }: Props) {
     target: ref,
     offset: ["0 1", "1 2"],
   });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const textData = [
     {
       id: 1,
@@ -146,8 +148,8 @@ export default function Price({ header }: Props) {
   return (
     <motion.div
       style={{
-        scale: scrollYProgress,
-        opacity: scrollYProgress,
+        scale: scaleProgress,
+        opacity: opacityProgress,
       }}
       ref={ref}
       className="flex flex-col items-center my-[50px]"
