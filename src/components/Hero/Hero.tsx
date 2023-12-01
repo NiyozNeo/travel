@@ -1,8 +1,9 @@
 // Your component file
 
 import React from "react";
-import Hero from "./Hero"; // Make sure to import your Hero component
+import Link from "next/link";
 import Carousel from "../Carousel/Carousel";
+
 interface Props {
   header: {
     home: string;
@@ -33,6 +34,7 @@ interface Props {
     ziyorat: string;
   };
 }
+
 export default function CenteredHero({ header }: Props) {
   return (
     <>
@@ -42,7 +44,12 @@ export default function CenteredHero({ header }: Props) {
         </h1>
         <p className="max-w-[800px] text-center mt-[25px]">{header.mainText}</p>
 
-        <button className="bg-[#3081D0] p-5 px-9 mt-8 text-[white] font-bold rounded-md">Band qilish</button>
+        <Link
+          href={"tel:+998901234567"}
+          className="bg-[#3081D0] p-5 px-9 mt-8 text-[white] font-bold rounded-md"
+        >
+          Band qilish
+        </Link>
       </div>
       <div className="text-center flex flex-col gap-2">
         <Carousel slides={false} />
