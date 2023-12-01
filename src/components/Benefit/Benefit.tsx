@@ -1,8 +1,25 @@
+"use client";
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export default function Benefit() {
+  const ref = useRef<any>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   return (
-    <div className="flex flex-wrap md:flex-nowrap items-center justify-between gap-8 ">
+    <motion.div
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
+      ref={ref}
+      className="flex flex-wrap md:flex-nowrap items-center justify-between gap-8 "
+    >
       <div>
         <Image
           className="w-[500px] h-[500px] rounded-md"
@@ -41,6 +58,6 @@ export default function Benefit() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

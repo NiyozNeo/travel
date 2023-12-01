@@ -1,12 +1,28 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import Description from "../Descr/Descr";
 import { MdOutlineWorkspacePremium } from "react-icons/md";
 import { IoWalletOutline } from "react-icons/io5";
 import { AiOutlineSafety } from "react-icons/ai";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Experience() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   return (
-    <div className="my-[70px]">
+    <motion.div
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
+      ref={ref}
+      className="my-[70px]"
+    >
       <div className="flex flex-col items-center justify-center ">
         <p className="font-semibold">Afzalliklar</p>
         <h1 className="font-bold text-[35px] text-center">
@@ -18,7 +34,10 @@ export default function Experience() {
           vel, nobis rem? Tempora possimus eligendi et eaque necessitatibus,
         </p>
       </div>
-      <div className="flex flex-wrap gap-5 items-center justify-center mt-[60px]">
+      <div
+        ref={ref}
+        className="flex flex-wrap gap-5 items-center justify-center mt-[60px]"
+      >
         <Description
           icons={<MdOutlineWorkspacePremium size={40} />}
           title="Mas'uliyat bilan yondashuv"
@@ -33,6 +52,7 @@ export default function Experience() {
           similique possimus recusandae inventore beatae vitae iure deserunt
           vel, nobis rem? Tempora possimus eligendi et eaque necessitatibus,"
         />
+
         <Description
           icons={<AiOutlineSafety size={40} />}
           title="Yuqori malakali mutaxassislar ko'magi"
@@ -41,6 +61,6 @@ export default function Experience() {
           vel, nobis rem? Tempora possimus eligendi et eaque necessitatibus,"
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

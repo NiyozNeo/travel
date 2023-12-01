@@ -1,4 +1,3 @@
-"use client"
 import About from "@/components/About/About";
 import Benefit from "@/components/Benefit/Benefit";
 import Experience from "@/components/Experience/Experience";
@@ -12,22 +11,20 @@ import { useTranslations } from "next-intl";
 import { Locale } from "../../../i18n.config";
 import { getDictionary } from "@/lib/Dictionary";
 import LocaleSwitcher from "@/components/Local-switcher/Local-switcher";
-import AnimatedContent from "@/components/Intro/Intro";
 import { use } from "react";
 
-export default  function Home({
+export default function Home({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
-  const { header } =  use(getDictionary(lang));
+  const { header } = use(getDictionary(lang));
 
   return (
     <>
       <Navbar header={header} />
       <section id="home">
         <Hero header={header} />
-        <AnimatedContent />
       </section>
       <section className="p-5 container  mx-auto" id="about">
         <About />

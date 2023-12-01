@@ -1,8 +1,24 @@
-import React from "react";
+"use client"
+import { useScroll, motion, useTransform } from "framer-motion";
+import React, { useRef } from "react";
 
 export default function Guides() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   return (
-    <div className="flex flex-wrap md:flex-nowrap justify-between gap-5 mt-[70px]">
+    <motion.div
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
+      ref={ref}
+      className="flex flex-wrap md:flex-nowrap justify-between gap-5 mt-[70px]"
+    >
       <div>
         <p>Unforgettable</p>
         <h1 className="font-bold text-[35px] max-w-[450px]">
@@ -36,6 +52,6 @@ export default function Guides() {
           allowFullScreen
         ></iframe>
       </div>
-    </div>
+    </motion.div>
   );
 }

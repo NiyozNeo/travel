@@ -1,3 +1,4 @@
+"use client";
 import Card from "../Card/Card";
 import { GiAirplaneDeparture, GiPalmTree } from "react-icons/gi";
 import { FaHotel, FaQuran } from "react-icons/fa";
@@ -12,6 +13,8 @@ import { FaVest } from "react-icons/fa";
 import { IoIosWater } from "react-icons/io";
 import { GiMountaintop } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
+import { useEffect, useRef } from "react";
+import { useAnimation, motion, useScroll } from "framer-motion";
 
 interface Props {
   header: {
@@ -45,6 +48,11 @@ interface Props {
 }
 
 export default function Price({ header }: Props) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1 2"],
+  });
   const textData = [
     {
       id: 1,
@@ -136,7 +144,14 @@ export default function Price({ header }: Props) {
   ];
 
   return (
-    <div className="flex flex-col items-center my-[70px]">
+    <motion.div
+      style={{
+        scale: scrollYProgress,
+        opacity: scrollYProgress,
+      }}
+      ref={ref}
+      className="flex flex-col items-center my-[50px]"
+    >
       <p className="font-semibold">Narx</p>
       <h1 className="font-bold text-[35px] my-[10px]">Ta'riflarimiz</h1>
       <p className="text-[14px]">
@@ -154,6 +169,7 @@ export default function Price({ header }: Props) {
           travel={travel}
           isComfort={false}
         />
+
         <Card
           editional={header.ziyorat}
           day={header.day}
@@ -166,6 +182,6 @@ export default function Price({ header }: Props) {
           isComfort={true}
         />
       </div>
-    </div>
+    </motion.div>
   );
 }
