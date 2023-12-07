@@ -15,6 +15,7 @@ import { GiMountaintop } from "react-icons/gi";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 import { useEffect, useRef } from "react";
 import { useAnimation, motion, useScroll, useTransform } from "framer-motion";
+import { Variables } from "@/app/app.config";
 
 interface Props {
   header: {
@@ -166,7 +167,7 @@ export default function Price({ header }: Props) {
           title="Ekonom"
           price="19"
           yearPrice="199"
-          phone="+998901234567"
+          phone={Variables.phone}
           data={textData}
           travel={travel}
           isComfort={false}
@@ -178,7 +179,7 @@ export default function Price({ header }: Props) {
           title="Komfort"
           price="29"
           yearPrice="299"
-          phone="+998902365891"
+          phone={Variables.phone}
           data={textData}
           travel={travel}
           isComfort={true}

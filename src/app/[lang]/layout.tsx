@@ -51,6 +51,7 @@ export default function RootLayout({
           type="text/css"
           href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         />
+        <meta name="mailru-domain" content="hOJQJlsg6LPd5nGf" />
       </Head>
    
       <body className={inter.className}>{children}</body>

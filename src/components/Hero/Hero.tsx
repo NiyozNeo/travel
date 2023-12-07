@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Carousel from "../Carousel/Carousel";
-
+import {Variables} from '../../app/app.config'
 interface Props {
   header: {
     home: string;
@@ -45,7 +45,7 @@ export default function CenteredHero({ header }: Props) {
         <p className="max-w-[800px] text-center mt-[25px]">{header.mainText}</p>
 
         <Link
-          href={"tel:+998901234567"}
+          href={`tel:${Variables.phone}`}
           className="bg-[#3081D0] p-5 px-9 mt-8 text-[white] font-bold rounded-md"
         >
           Band qilish

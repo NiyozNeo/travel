@@ -1,4 +1,5 @@
 "use client";
+import { Variables } from "@/app/app.config";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
@@ -37,8 +38,8 @@ export default function Location() {
             <HiOutlinePhone size={24} />
             <div>
               <p className="font-bold">Telefon raqam</p>
-              <Link className="decoration underline" href={"tel:+998901235698"}>
-                +998901235698
+              <Link className="decoration underline" href={`tel:${Variables.phone}`}>
+                {Variables.phone}
               </Link>
             </div>
           </div>

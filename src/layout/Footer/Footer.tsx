@@ -58,13 +58,13 @@ export default function Footer() {
       </div>
       <div className="bg-[black] w-full h-[1px] my-[25px]"></div>
       <div>
-        <Link
+        {/* <p
           target="_blank"
           href={"http://krypton.uz/"}
           className="flex items-center justify-center gap-5"
-        >
-          <p className="text-center">© 2023 KRYPTON</p>
-        </Link>
+        > */}
+          <p className="text-center">© 2023 Hidoyat travel MCHJ </p>
+        {/* </p> */}
       </div>
     </div>
   );
