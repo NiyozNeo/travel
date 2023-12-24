@@ -22,3 +22,40 @@ export const lang = {
       },
   },
 };
+
+
+export interface Props {
+  header: {
+    home: string;
+    about: string;
+    price: string;
+    book: string;
+    priceword: string;
+    pricemain: string;
+    makkahlive: string;
+    tarifs: string;
+    benefit: string;
+    contact: string;
+    mainText: string;
+    umra: string;
+    airPlane: string;
+    hotel: string;
+    visa: string;
+    ellikBosh: string;
+    insurance: string;
+    transfer: string;
+    gift: string;
+    scarf: string;
+    bag: string;
+    vest: string;
+    quran: string;
+    water: string;
+    mountain: string;
+    factory: string;
+    garden: string;
+    xiroMountain: string;
+    food: string;
+    day: string;
+    ziyorat: string;
+  };
+}

@@ -23,9 +23,13 @@ export function middleware(request: NextRequest) {
   const pathnameIsMissingLocale = i18n.locales.every(
     locale => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   )
-
+  console.log('hi');
+  
   // Redirect if there is no locale
-  if (pathnameIsMissingLocale) {
+  if(pathname === "/succes") {
+
+  }
+  else if (pathnameIsMissingLocale) {
     const locale = getLocale(request)
     return NextResponse.redirect(
       new URL(
@@ -38,5 +42,5 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)']
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|succes.html).*)']
 }

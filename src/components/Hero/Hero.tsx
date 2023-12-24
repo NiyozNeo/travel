@@ -4,36 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Carousel from "../Carousel/Carousel";
 import {Variables} from '../../app/app.config'
-interface Props {
-  header: {
-    home: string;
-    about: string;
-    price: string;
-    benefit: string;
-    contact: string;
-    mainText: string;
-    umra: string;
-    airPlane: string;
-    hotel: string;
-    visa: string;
-    ellikBosh: string;
-    insurance: string;
-    transfer: string;
-    gift: string;
-    scarf: string;
-    bag: string;
-    vest: string;
-    quran: string;
-    water: string;
-    mountain: string;
-    factory: string;
-    garden: string;
-    xiroMountain: string;
-    food: string;
-    day: string;
-    ziyorat: string;
-  };
-}
+import { Props } from "@/lang/lang";
 
 export default function CenteredHero({ header }: Props) {
   return (
@@ -48,7 +19,7 @@ export default function CenteredHero({ header }: Props) {
           href={`tel:${Variables.phone}`}
           className="bg-[#3081D0] p-5 px-9 mt-8 text-[white] font-bold rounded-md"
         >
-          Band qilish
+          {header.book}
         </Link>
       </div>
       <div className="text-center flex flex-col gap-2">

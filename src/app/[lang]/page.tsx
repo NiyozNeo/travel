@@ -1,5 +1,3 @@
-import About from "@/components/About/About";
-import Benefit from "@/components/Benefit/Benefit";
 import Experience from "@/components/Experience/Experience";
 import Guides from "@/components/Guides/Guides";
 import Hero from "@/components/Hero/Hero";
@@ -7,11 +5,10 @@ import Location from "@/components/Location/Location";
 import Price from "@/components/Price/Price";
 import Footer from "@/layout/Footer/Footer";
 import Navbar from "@/layout/Header/Header";
-import { useTranslations } from "next-intl";
 import { Locale } from "../../../i18n.config";
 import { getDictionary } from "@/lib/Dictionary";
-import LocaleSwitcher from "@/components/Local-switcher/Local-switcher";
 import { use } from "react";
+import Booking from "@/components/Booking/Booking";
 
 export default function Home({
   params: { lang },
@@ -26,20 +23,24 @@ export default function Home({
       <section id="home">
         <Hero header={header} />
       </section>
-      <section className="p-5 container  mx-auto" id="about">
+      {/* <section className="p-5 container  mx-auto" id="about">
         <About />
-      </section>
+      </section> */}
       <section className="p-5" id="price">
         <Price header={header} />
       </section>
       <section className="p-5 container mx-auto" id="benefit">
         <Experience />
       </section>
-      <section className="p-5 container mx-auto" id="Ex">
+      {/* <section className="p-5 container mx-auto" id="Ex">
         <Benefit />
-      </section>
+      </section> */}
       <section className="p-5 container  mx-auto" id="guides">
-        <Guides />
+        <Guides header={header}/>
+      </section>
+      
+      <section className="p-5 container  mx-auto" id="booking">
+        <Booking header={header}/>
       </section>
       <section className="p-5 container  mx-auto" id="location">
         <Location />
