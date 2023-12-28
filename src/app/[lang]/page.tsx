@@ -9,6 +9,7 @@ import { Locale } from "../../../i18n.config";
 import { getDictionary } from "@/lib/Dictionary";
 import { use } from "react";
 import Booking from "@/components/Booking/Booking";
+import License from "@/components/License/License";
 
 export default function Home({
   params: { lang },
@@ -45,8 +46,11 @@ export default function Home({
       <section className="p-5 container  mx-auto" id="location">
         <Location header={header}/>
       </section>
+      <section>
+       <License header={header} />
+      </section>
       <footer className="p-5 container  mx-auto">
-        <Footer />
+        <Footer header={header}/>
       </footer>
     </>
   );

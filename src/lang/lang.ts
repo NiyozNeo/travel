@@ -84,5 +84,6 @@ export interface Props {
         ketishvaqti: string;
         contactustext1: string;
         contactustext2: string;
+        bottomtext: string;
     };
 }

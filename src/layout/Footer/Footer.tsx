@@ -10,17 +10,18 @@ import MyComponent from "@/components/SocialButtons/SocialButtons";
 import SocialButtons from "@/components/SocialButtons/SocialButtons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { Props } from "@/lang/lang";
 
-export default function Footer() {
-  return (
-    <div>
-      <div className="flex flex-col md:flex-row gap-8 justify-center items-center md:justify-between my-[50px]">
-        <Link href={"#"} className="font-bold text-[35px]">
-          Hidoyat Travel
-        </Link>
+export default function Footer({ header }: Props) {
+    return (
+        <div>
+            <div className="flex flex-col md:flex-row gap-8 justify-center items-center md:justify-between my-[50px]">
+                <Link href={"#"} className="font-bold text-[35px]">
+                    Hidoyat Travel
+                </Link>
 
-        <div className="flex items-center ">
-          {/* <div className="social">
+                <div className="flex items-center ">
+                    {/* <div className="social">
             <div className="icons">
               <div className="icon instagram">
                 <div className="tooltip"> Instagram </div>
@@ -43,9 +44,9 @@ export default function Footer() {
             </div>
           </div> */}
 
-          <MyComponent />
+                    <MyComponent />
 
-          {/* <Link href={"#"}>
+                    {/* <Link href={"#"}>
             <FaInstagram size={24} />
           </Link>
           <Link href={"#"}>
@@ -54,18 +55,20 @@ export default function Footer() {
           <Link href={"#"}>
             <LiaTelegram size={24} />
           </Link> */}
-        </div>
-      </div>
-      <div className="bg-[black] w-full h-[1px] my-[25px]"></div>
-      <div>
-        {/* <p
+                </div>
+            </div>
+            <div className="bg-[black] w-full h-[1px] my-[25px]"></div>
+            <div>
+                {/* <p
           target="_blank"
           href={"http://krypton.uz/"}
           className="flex items-center justify-center gap-5"
         > */}
-          <p className="text-center">© 2023 Hidoyat travel nomi "Hidoyat umra turizm Mchj ga qarashli" </p>
-        {/* </p> */}
-      </div>
-    </div>
-  );
+                <p className="text-center">
+                    {header.bottomtext}
+                </p>
+                {/* </p> */}
+            </div>
+        </div>
+    );
 }
