@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/inline-script-id */
 "use client";
 import { Props } from "@/lang/lang";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -11,6 +10,7 @@ export default function Booking({ header }: Props) {
         target: ref,
         offset: ["0 1", "1.33 1"],
     });
+
     const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
     const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
     return (
@@ -24,87 +24,78 @@ export default function Booking({ header }: Props) {
         >
             <div>
                 <h2 className="font-bold text-[35px] text-center mb-4">
-                    Joy band qilish
+                    {header.bookplace}
                 </h2>
-                <form method="post" className="max-w-sm mx-auto">
-                    <div className="mb-5">
-                        <div className="relative max-w-sm">
-                            <label
-                                htmlFor="traveldate"
-                                className="block mb-2 text-sm font-medium text-gray-900 "
-                            >
-                                Ketish vaqti
-                            </label>
-
-                            <input
-                                type="date"
-                                id="traveldate"
-                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 "
-                                placeholder="Select date"
-                            />
-                        </div>
-                    </div>
-                    <div className="mb-5">
+                <div className="mb-5">
+                    <div className="relative max-w-sm">
                         <label
-                            htmlFor="tarifselect"
+                            htmlFor="traveldate"
                             className="block mb-2 text-sm font-medium text-gray-900 "
                         >
-                            Tarif turi
+                            {header.ketishvaqti}
                         </label>
-                        <select
-                            name="tarif"
-                            id="tarifselect"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                        >
-                            <option value="standart">Standart</option>
-                            <option value="komfort">Komfort</option>
-                        </select>
-                    </div>
+                        <p className="text-[10px]">
+                        {header.warnketishvaqti}
 
-                    <div className="mb-5">
-                        <button
-                            type="submit"
-                            className="bg-[#3081D0] p-5 px-9  text-[white] font-bold rounded-md "
-                        >
-                            {header.book}
-                        </button>
+                        </p>
+                        <input
+                            type="date"
+                            id="traveldate"
+                            min="2023-12-15"
+                            max="2025-02-01"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 "
+                            placeholder="Select date"
+                        />
                     </div>
+                </div>
+                <div className="mb-5">
+                    <label
+                        htmlFor="tarifselect"
+                        className="block mb-2 text-sm font-medium text-gray-900 "
+                    >
+                        {header.tariftype}
+                    </label>
+                    <select
+                        name="tarif"
+                        id="tarifselect"
+                        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    >
+                        <option value="standart">Standart</option>
+                        <option value="komfort">Komfort</option>
+                    </select>
+                </div>
+
+                <form
+                    action="https://my.click.uz/services/pay"
+                    id="click_form"
+                    method="get"
+                    target="_blank"
+                >
+                    <input type="hidden" name="amount" value="$transAmount" />
+                    <input
+                        type="hidden"
+                        name="merchant_id"
+                        value="$merchantID"
+                    />
+                    <input
+                        type="hidden"
+                        name="merchant_user_id"
+                        value="$merchantUserID"
+                    />
+                    <input type="hidden" name="service_id" value="$serviceID" />
+                    <input
+                        type="hidden"
+                        name="transaction_param"
+                        value="$transID"
+                    />
+                    <input type="hidden" name="return_url" value="$returnURL" />
+                    <input type="hidden" name="card_type" value="$cardType" />
+                    <button type="submit" className="click_logo">
+                        <i></i>Pay with CLICK
+                    </button>
                 </form>
-                <form method="post" action="/your-after-payment-url">
-                    <script
-                        src="https://my.click.uz/pay/checkout.js"
-                        className="uzcard_payment_button"
-                        data-service-id="MERCHANT_SERVICE_ID"
-                        data-merchant-id="MERCHANT_ID"
-                        data-transaction-param="MERCHANT_TRANS_ID"
-                        data-merchant-user-id="MERCHANT_USER_ID"
-                        data-amount="50000"
-                        data-card-type="MERCHANT_CARD_TYPE"
-                        data-label="Pay"
-                    ></script>
-                </form>
+
             </div>
-            <Script src="https://my.click.uz/pay/checkout.js" />
-            <Script
-                onLoad={() => {
-                    var linkEl = document.querySelector(".input-btn");
-                    linkEl.addEventListener("click", function () {
-                        createPaymentRequest(
-                            {
-                                service_id: "MERCHANT_SERVICE_ID",
-                                merchant_id: "MERCHANT_ID",
-                                amount: 50000,
-                                transaction_param: "MERCHANT_TRANS_ID",
-                                merchant_user_id: "MERCHANT_USER_ID",
-                            },
-                            function (data) {
-                                console.log("closed", data.status);
-                            }
-                        );
-                    });
-                }}
-            >
-            </Script>
         </motion.div>
     );
 }

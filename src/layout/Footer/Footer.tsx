@@ -63,7 +63,7 @@ export default function Footer() {
           href={"http://krypton.uz/"}
           className="flex items-center justify-center gap-5"
         > */}
-          <p className="text-center">© 2023 Hidoyat travel MCHJ </p>
+          <p className="text-center">© 2023 Hidoyat travel nomi "Hidoyat umra turizm Mchj ga qarashli" </p>
         {/* </p> */}
       </div>
     </div>

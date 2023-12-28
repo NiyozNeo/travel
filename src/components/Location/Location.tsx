@@ -1,12 +1,13 @@
 "use client";
 import { Variables } from "@/app/app.config";
+import { Props } from "@/lang/lang";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
 import { HiOutlinePhone } from "react-icons/hi2";
 import { SlLocationPin } from "react-icons/sl";
 
-export default function Location() {
+export default function Location({ header }: Props) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -26,18 +27,16 @@ export default function Location() {
       <div className="flex flex-wrap md:flex-nowrap gap-8 items-center justify-between mb-[50px]">
         <div className="flex flex-col w-full md:w-2/3">
           <p>Kontakt</p>
-          <h1 className="font-bold text-[35px]">Biz bilan bog'lanish</h1>
+          <h1 className="font-bold text-[35px]">{header.contactus}</h1>
           <p className="max-w-[700px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-            quod autem culpa maiores quia quibusdam iure fugiat minima
-            aspernatur reprehenderit?
+            {header.contactustext1} <a href="mailto:root@hidoyattravel.uz">root@hidoyattravel.uz</a>. {header.contactustext2}
           </p>
         </div>
         <div className="flex flex-col gap-7 w-full md:w-1/3">
           <div className="flex items-center gap-2">
             <HiOutlinePhone size={24} />
             <div>
-              <p className="font-bold">Telefon raqam</p>
+              <p className="font-bold">{header.phonetext}</p>
               <Link className="decoration underline" href={`tel:${Variables.phone}`}>
                 {Variables.phone}
               </Link>
@@ -46,9 +45,9 @@ export default function Location() {
           <div className="flex items-center gap-2">
             <SlLocationPin size={24} />
             <div>
-              <p className="font-bold">Manzil</p>
-              <Link className="" href={"#"}>
-                Shayxontohur tumani, Chorsu dahasi , 12
+              <p className="font-bold">{header.addressword}</p>
+              <Link className="" target="_blank" href={"https://maps.app.goo.gl/hctE2Et9TanufEQz5"}>
+              {header.address}
               </Link>
             </div>
           </div>

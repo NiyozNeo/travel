@@ -30,7 +30,7 @@ export default function Home({
         <Price header={header} />
       </section>
       <section className="p-5 container mx-auto" id="benefit">
-        <Experience />
+        <Experience header={header}/>
       </section>
       {/* <section className="p-5 container mx-auto" id="Ex">
         <Benefit />
@@ -43,7 +43,7 @@ export default function Home({
         <Booking header={header}/>
       </section>
       <section className="p-5 container  mx-auto" id="location">
-        <Location />
+        <Location header={header}/>
       </section>
       <footer className="p-5 container  mx-auto">
         <Footer />
