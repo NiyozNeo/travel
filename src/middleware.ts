@@ -26,7 +26,7 @@ export function middleware(request: NextRequest) {
   console.log('hi');
   
   // Redirect if there is no locale
-  if(pathname === "/succes") {
+  if(pathname === "/") {
 
   }
   else if (pathnameIsMissingLocale) {
@@ -42,5 +42,5 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|succes.html).*)']
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|succes.html|img|css).*)']
 }
