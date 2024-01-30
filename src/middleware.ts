@@ -20,24 +20,24 @@ function getLocale(request: NextRequest): string | undefined {
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
-  const pathnameIsMissingLocale = i18n.locales.every(
-    locale => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  )
-  console.log('hi');
+  // const pathnameIsMissingLocale = i18n.locales.every(
+  //   locale => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
+  // )
+  // console.log('hi');
   
-  // Redirect if there is no locale
-  if(pathname === "/") {
+  // // Redirect if there is no locale
+  // if(pathname === "/") {
 
-  }
-  else if (pathnameIsMissingLocale) {
-    const locale = getLocale(request)
-    return NextResponse.redirect(
-      new URL(
-        `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
-        request.url
-      )
-    )
-  }
+  // }
+  // else if (pathnameIsMissingLocale) {
+    // const locale = getLocale(request)
+    // return NextResponse.redirect(
+    //   new URL(
+    //     `/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`,
+    //     request.url
+    //   )
+    // )
+  // }
 }
 
 export const config = {
